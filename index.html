@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão entre Binário e Decimal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="principal">
+        <section class="container_bin_para_dec">
+            <h4 for="btn-bin" class="container_label">Conversão de Binário para Decimal</h4>
+            <div class="campos_interacao">
+                <input type="text" id="btn_bin" class="btn_bin--para-dec" placeholder="Insira um número" required>
+                <input type="button" value="=" class="btn_result" onclick="resultCalcDecParaBin()">
+                <div type="text" id="result_convert--bin-dec" class="result_convert"></div>
+            </div>
+        </section>
+        <section class="container_dec_para_bin">
+            <h4 for="btn-bin" class="container_label">Conversão de decimal para Binário</h4>
+            <div class="campos_interacao">
+                <input type="text" id="btn_dec" class="btn_dec--para-bin" placeholder="Insira um número" required>
+                <input type="button" value="=" class="btn_result" onclick="resultCalcBinParaDec()">
+                <div type="text" id="result_convert--dec-bin" class="result_convert"></div>
+            </div>
+        </section>
+        <footer class="rodape">
+            Criado e Desenvolvido por João Vitor dos Anjos Godoi - <strong>github.com/jvGodoi</strong>
+        </footer>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
