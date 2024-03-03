@@ -42,3 +42,37 @@ function resultCalcBinParaDec(){
     let resultado = calcBinParaDec (numeroBinario)
     document.getElementById("result_convert--dec-bin").innerText = resultado
 }
+
+function soma(bin1, bin2) {
+    var resultado = ""
+    var carry = 0;
+    var i = bin1.length - 1
+    var j = bin2.length - 1
+
+    while (i >= 0 || j >= 0 || carry > 0) {
+
+        var bit1 = 0
+        var bit2 = 0
+
+        if (i >= 0) {
+            bit1 = parseInt(bin1[i])
+            i -= 1
+        }
+        if (j >= 0) {
+            bit2 = parseInt(bin2[j])
+            j -= 1
+        }
+
+        var soma = bit1 + bit2 + carry
+        resultado = (soma % 2) + resultado
+        carry = Math.floor(soma / 2)
+    }
+    return resultado
+}
+
+function resultSomaBin(){
+    let binario1 = document.getElementById("bin_num1").value
+    let binario2 = document.getElementById("bin_num2").value
+    let resultado = soma(binario1, binario2)
+    document.getElementById("resultado_soma").innerText = resultado
+}
