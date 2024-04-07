@@ -143,3 +143,20 @@ function resultMultBinarios(){
     let resultado = multBinarios(binario1, binario2)
     document.getElementById("resultado_mult").innerText = resultado
 }
+
+function divBinarios(binario1, binario2) { // Passando duas strings binárias como parâmetro
+    // Declarando duas variáveis que irão receber o valor dos parâmetros da função convertidos para base 2
+    let int1 = parseInt(binario1, 2);     
+    let int2 = parseInt(binario2, 2);
+    let div = parseInt((int1 / int2).toString(2)); // Retornando a divisão das duas variáveis criadas acima e convertendo-as novamente para binário
+    return div;
+    
+}
+
+// Função para retornar no HTML o resultado final da divisão
+function resultDivBinarios() {
+    let binario1 = document.getElementById("bin_div1").value;
+    let binario2 = document.getElementById("bin_div2").value;
+    let resultado = divBinarios(binario1, binario2);
+    document.getElementById("resultado_div").innerText = resultado;
+}
